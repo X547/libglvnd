@@ -43,6 +43,12 @@ option(
   description : 'Support the GLX platform.'
 )
 option(
+  'hgl',
+  type : 'boolean',
+  value : false,
+  description : 'Support the HGL platform.'
+)
+option(
   'gles1',
   type : 'boolean',
   value : true,

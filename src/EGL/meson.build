@@ -39,9 +39,7 @@ libEGL = shared_library(
     'libeglerror.c',
   ],
   c_args : [
-    '-DDEFAULT_EGL_VENDOR_CONFIG_DIRS="@0@/glvnd/egl_vendor.d:@1@/glvnd/egl_vendor.d"'.format(
-      join_paths(get_option('prefix'), get_option('sysconfdir')),
-      join_paths(get_option('prefix'), get_option('datadir'))),
+    '-DDEFAULT_EGL_VENDOR_CONFIG_DIRS="/boot/home/config/non-packaged/add-ons/opengl/egl_vendor.d:/boot/home/config/add-ons/opengl/egl_vendor.d:/boot/system/non-packaged/add-ons/opengl/egl_vendor.d:/boot/system/add-ons/opengl/egl_vendor.d"'
   ],
   include_directories : inc_include,
   link_args : '-Wl,-Bsymbolic',

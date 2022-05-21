@@ -23,7 +23,7 @@
 
 project(
   'glvnd',
-  'c',
+  'c', 'cpp',
   version : '1.6.0',
   meson_version : '>= 0.48',
   default_options : ['c_std=gnu99']

@@ -22,6 +22,7 @@
 # MATERIALS OR THE USE OR OTHER DEALINGS IN THE MATERIALS.
 
 inc_include = include_directories('.')
+inc_include_opengl = include_directories('opengl')
 
 install_headers(
   'glvnd/GLdispatchABI.h',
@@ -51,6 +52,15 @@ if with_glx and _headers
     'GL/glx.h',
     'GL/glxext.h',
     subdir : 'GL',
+  )
+endif
+
+if get_option('hgl') and _headers
+  install_headers(
+    'opengl/OpenGLKit.h',
+    'opengl/GLView.h',
+    'opengl/GLRenderer.h',
+    subdir : 'opengl',
   )
 endif
 
@@ -89,4 +99,3 @@ if get_option('egl') and _headers
     subdir : 'EGL',
   )
 endif
-
